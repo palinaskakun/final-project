@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'ABCMonumentGrotesk';
+  src: url('./ABCMonumentGrotesk-Regular.9e94bf1c.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ABCMonumentGrotesk-Bold';
+  src: url('./ABCMonumentGrotesk-Medium.e10cae81.otf') format('opentype');
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'ABCMonumentGrotesk-Bold', sans-serif;
+}
+
+#top-row {
+  font-size: 3em;
+  font-family: ABCMonumentGrotesk-Bold, sans-serif;
+}
