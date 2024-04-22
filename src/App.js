@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import {supabase} from './supabaseClient';
-import logo from './logo.svg';
+
 import './App.css';
-import { toBeEnabled } from '@testing-library/jest-dom/matchers';
+
 
 const FirstRow = () => {
   return (
@@ -117,7 +117,7 @@ const PictureCard = ({ pictureUrl }) => {
   return (
     <div className="w-full sm:w-1/2 md:w-1/3 p-1">
       <div className="bg-blue-100 rounded-lg shadow-md p-6 h-full flex justify-center items-center hover:bg-green-200 transition duration-300 transform hover:-translate-y-2">
-        <img src={pictureUrl} alt="Picture" />
+        <img src={pictureUrl} alt="Icon" />
       </div>
     </div>
   );
@@ -166,7 +166,7 @@ function App() {
     
   const onUpdateDescription = async (goalId, newDescription) => {
     try {
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('summer-goals')
         .update({ description: newDescription })
         .eq('id', goalId);
